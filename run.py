@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 from pathlib import Path
 from models import *
-from experiment import VAExperment
+from experiment import VAExperiment
 import torch.backends.cudnn as cudnn
 import pytorch_lightning as pl
 from pytorch_lightning import Trainer
@@ -36,7 +36,7 @@ tb_logger = TensorBoardLogger(save_dir=config['logging_params']['save_dir'],
 pl.seed_everything(config['exp_params']['manual_seed'])
 
 model = vae_models[config['model_params']['name']](**config['model_params'])
-experiment = VAExperment(model,
+experiment = VAExperiment(model,
                          config['exp_params'])
 
 data = VAEDataset(**config['data_params'], pin_memory=torch.cuda.is_available())
