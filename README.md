@@ -1,7 +1,9 @@
 <h1 align="center">
   <b>PyTorch VAE</b><br>
 </h1>
+
 ![result.png](result.png)
+
 ## 개요
 - 원본 레포지토리:https://github.com/AntixK/PyTorch-VAE/tree/master
 - lightning 최신 버전(2.4.0)에 맞게 코드 변경
